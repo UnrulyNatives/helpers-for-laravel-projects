@@ -1,2 +1,3 @@
-# laravel-helper-matic
-A set of code to use across all projects
+# laravel-helpers and solutions
+
+A set of code I use across all projects
