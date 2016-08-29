@@ -2,8 +2,9 @@
 
 namespace UnrulyNatives\Helpers;
  
-use App\Http\Controllers\Controller;
+use Auth;
 use Carbon\Carbon;
+use App\Http\Controllers\Controller;
  
 class HelpersController extends Controller
 {

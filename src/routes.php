@@ -1,8 +1,8 @@
 <?php 
 
 
-Route::get('timezonesh/{timezone?}', 
+Route::get('helpers/timezones/{timezone?}', 
   'unrulynatives\helpers\HelpersController@index');
 
-// Route::get('gravatar', 
-//   'laraveldaily\timezones\HelpersController@gravatar');
+Route::get('unhelpers/gravatar', 
+  'unrulynatives\helpers\HelpersController@gravatar');
