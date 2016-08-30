@@ -21,6 +21,11 @@ class HelpersServiceProvider extends ServiceProvider
 
 
 
+        $this->publishes([
+            __DIR__.'/unstarter' => base_path('resources/views/unstarter'),
+
+
+
         // Publishes css & js resources to the app
         $this->publishes([__DIR__.'/../public' => public_path(),
         ], 'public'),
