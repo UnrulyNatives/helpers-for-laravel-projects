@@ -15,7 +15,7 @@ With time, the starter kit would only need to be extended by this package.
 ## Installation
 
 1. Add 
-	`"unrulynatives/helpers": "0.0.8"`` 
+	`"unrulynatives/helpers": "0.0.9"`` 
 to your composer.json file.
 
 2. Add this to your `config/app.php` file in packages section
@@ -31,10 +31,28 @@ In your `User` model:
 `use Unrulynatives\Helpers\UserExtensions;
 
 
+
+
 class User extends Authenticatable
 {
 
 use UserExtensions;`
+
+
+5. Register trait with useful for models
+In your model file declare:
+`use Unrulynatives\Helpers\ModelExtensions;
+
+
+
+
+class [your-model-name-goes-here] extends Authenticatable
+{
+
+use ModelExtensions;`
+
+
+
 
 ### Done!
  Now you can check if the package works. Point your browser to `unrulyhelpers`. You should see a clock - an example developed along Laraveldaily tutorial http://laraveldaily.com/how-to-create-a-laravel-5-package-in-10-easy-steps/
