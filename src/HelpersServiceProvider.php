@@ -19,22 +19,14 @@ class HelpersServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/views' => base_path('resources/views/vendor/unrulynatives/helpers'),
 
-
         // publish view files for the UN Starter Kit
-        $this->publishes([
             __DIR__.'/unstarter_views' => base_path('resources/views/unstarter'),
 
         // publish app files (Models, Controllers, etc.) for the UN Starter Kit
-        $this->publishes([
-            __DIR__.'/unstarter_app' => base_path('/'),
+            __DIR__.'/unstarter_app' => base_path('unstarter'),
 
-        // publish app files (Models, Controllers, etc.) for the UN Starter Kit
-        $this->publishes([
+        // publish  Controllers to the app's app/Http/Controllers folder
             __DIR__.'/unstarter_controllers' => base_path('app/Http/Controllers'),
-
-        // Publishes css & js resources to the app
-        $this->publishes([__DIR__.'/../public' => public_path(),
-        ], 'public'),
 
 
             
