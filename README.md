@@ -16,7 +16,7 @@ With time, this package would contain all modifications of the bare Laravel app.
 ## Installation
 
 1. Add 
-	`"unrulynatives/helpers": "0.0.10"`
+	`"unrulynatives/helpers": "0.0.13"`
 to your composer.json file.
 
 2. Add this to your `config/app.php` file in packages section

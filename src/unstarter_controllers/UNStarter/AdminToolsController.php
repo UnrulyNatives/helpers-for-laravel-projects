@@ -177,6 +177,14 @@ class AdminToolsController extends Controller
         $matchcontent = Input::get('matchcontent');
         $newcontent = Input::get('newcontent');
 
+        if(!isset($matchcontent)) {
+            $matchcontent = 'bb';
+        }
+        if(!isset($newcontent)) {
+            $newcontent = 'ccc';
+        }
+
+
         $itemtype = str_singular($itemkind);
 
         //getting Class name
@@ -189,53 +197,64 @@ class AdminToolsController extends Controller
 
         
         if (class_exists($name) && get_parent_class($class) == 'Illuminate\Database\Eloquent\Model') {
-            $model = $class->where('name','')
+            $model = $class->where($field2change,$matchcontent)
                 ->get();
 
             // the action itself:
-            $itemstobeactedupon = $class->where('name',$matchcontent)->count();
+            $itemstobeactedupon = $class->where($field2change,$matchcontent)->count();
             // $itemstobeacteduponbefore = \App\Models\Related::where('name','')->count();
 
 
 
 
-            $acteduponarray = $class->where('name',$matchcontent)->pluck('id');
+            $acteduponarray = $class->where($field2change,$matchcontent)
+                // ->limit(20)
+                ->pluck('id');
             $affected = $acteduponarray->count();
 
             // doing the job!
             $perform = Input::get('perform');
-            if(isset($perform) && $perform=1) {
+            if(isset($perform) && $perform==1) {
 
                 // the action itself:
-                $itemstobeacteduponbefore = $class->where('name',$matchcontent)->count();
+                $itemstobeacteduponbefore = $class->where($field2change,$matchcontent)->count();
                 // $actedupon = $class->destroy($acteduponarray);
-                $objects = $class->whereIn('id', $acteduponarray)->get(); 
+                $objects = $class->whereIn('id', $acteduponarray)
+                    // ->limit(20)
+                    ->get(); 
 
 
                 echo "List of items changed: <br>";
                 foreach($objects as $o) {
-                    $o->name = $newcontent;
+
+
+                    // if possible, retrieve page title and use it as event name
+                    $page_url = $o->URL;
+                    try {
+
+                        // Revel's privete function, now a helper
+                        // $page_title = $this->_get_url_title($page_url);
+                        $page_title = \App\Helpers\SitewideHelper::parseTitle($page_url);
+                        // dd($page_title);
+                    } catch(ErrorException $e) {
+                        return Redirect::back()->withInput()->withErrors(['error accessing url']);
+                         // TO DO: fix error msg
+                    }
+                    // hot fix for L5.3 BB #952
+                    $page_title2 = substr($page_title,0,150).'...';
+
+                    echo $page_title;
+
+                    if(isset($page_title2) && $page_title2 !='') {
+                        $o->name = $page_title2;
+                        
+                    } else {
+                        $o->name = '';
+                        
+                    }
                     $o->save();
                     echo 'Changed: '.$o->id.'<br>';
-
-
-            // if possible, retrieve page title and use it as event name
-            $page_url = $o->URL;
-            try {
-
-                // Revel's privete function, now a helper
-                // $page_title = $this->_get_url_title($page_url);
-                $page_title = SitewideHelper::parseTitle($page_url);
-            } catch(ErrorException $e) {
-                return Redirect::back()->withInput()->withErrors(['error accessing url']);
-                 // TO DO: fix error msg
-            }
-            // hot fix for L5.3 BB #952
-            $page_title2 = substr($page_title,0,150).'...';
-
-
-
-
+                    echo $o->URL;
 
                 }
 

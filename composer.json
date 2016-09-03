@@ -13,11 +13,12 @@
     },
     "autoload": {
         "psr-4": {
+            "App\\": "app/",
 
-
-            "Unrulynatives\\Helpers\\": "src"
+            "Unrulynatives\\Helpers\\": "src/"
 
         }
     },
     "minimum-stability": "dev"
 }
+
