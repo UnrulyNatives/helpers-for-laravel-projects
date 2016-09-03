@@ -299,7 +299,7 @@ align-self: center;
   width: 100%
 }
 
-.un_flex > h2 {
+.un_flex > h2, .un_flex > h3 {
     width: 100%;
     text-align: center;
     padding: 1rem;
@@ -481,7 +481,14 @@ align-self: center;
 }
 
 
+.un_nav > * {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  border: 0;
+    box-shadow: 
+     inset 0px 0px 10px 5px rgba(38,31,31,.2)
+    , 2px 2px 3px 1px rgba(18,11,11,.3);
 
+}
 
 
 .un_statistic:hover {
@@ -571,7 +578,7 @@ align-self: center;
     position: relative;
     display: block;
     margin: 1rem;
-    padding: 1rem;
+    /*padding: 1rem;*/
 
 
     flex: 1 1 40rem;
@@ -813,6 +820,7 @@ background: @step1 !important; /* fallback for old browsers */
 
 .csch_subtle3 {
     background: rgba(147,128,108,.1);
+    color: @cstep3;
 }
 
 .csch_subtle4 {
@@ -898,7 +906,8 @@ color: @step4 !important;
 
 [class*="csch_dark"] a:not(.item)
  {
-    color: #ffe !important;
+/*    color: #ffe !important;
+    background: @cstep3;*/
 }
 
 [class*="csch_dark"]  a.btn
@@ -1443,6 +1452,41 @@ div[class^="communique"] + div[class^="communique"]{
 }
 
 
+.un_btn_lg {
+    border: 2px solid rgba(211,208,193,.06);
+    border-radius: 3px;
+    padding: .3rem .6rem;
+    margin: .3rem;
+    font-size: 1.7rem;
+    background: @cstep4;
+  
+}
+
+.un_btn_lg:hover {
+  background: @cstep2!important;
+    text-decoration: none;       
+}
+.un_flex > .un_btn_lg {
+  padding: 1rem .3rem;
+  font-size: 1.5rem;
+  text-indent: 0;
+  /*width: 100%!important;*/
+  flex: 1 1 16rem;
+  max-width: 24rem;
+
+}
+.un_flex > .un_btn_lg > .him{
+  display: block;
+}
+
+
+.un_flex>.un_btn_lg {
+    flex: 1 1 auto;
+    margin: .3rem;
+}
+
+
+
 
 //////////////////////////////
 //
@@ -1808,6 +1852,9 @@ label {
   position: relative;
   z-index: 100;
 }
+
+
+
 //////////////////////////////
 //
 // ------------

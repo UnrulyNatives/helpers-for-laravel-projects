@@ -2,7 +2,8 @@
 A set of code snippets and functions to use across all projects. 
 
 This package contains some modifications made over a fresh installation of Laravel 5.3. 
-With time, the starter kit would only need to be extended by this package.
+
+With time, this package would contain all modifications of the bare Laravel app. In other words, as soon as you include this package in your composer.json, you will get fully working starter kit.
 
 
 
@@ -15,7 +16,7 @@ With time, the starter kit would only need to be extended by this package.
 ## Installation
 
 1. Add 
-	`"unrulynatives/helpers": "0.0.9"`` 
+	`"unrulynatives/helpers": "0.0.10"`
 to your composer.json file.
 
 2. Add this to your `config/app.php` file in packages section
@@ -50,6 +51,26 @@ class [your-model-name-goes-here] extends Authenticatable
 {
 
 use ModelExtensions;`
+
+6. You need to register the routes defined in this package. Open `\app\Providers\RouteServiceProvider.php` and 
+
+- add `$this->mapUnstarterRoutes();` to the `map()` function and
+- add the below code at the bottom of mapWebRoutes() fucntion:
+
+```
+    protected function mapUnstarterRoutes()
+    {
+        Route::group([
+            'middleware' => 'web',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('unstarter/routes/unstarter.php');
+        });
+    }
+```    
+
+
+
 
 
 
