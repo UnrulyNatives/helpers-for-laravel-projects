@@ -29,7 +29,7 @@ class HelpersServiceProvider extends ServiceProvider
         // publish  Controllers to the app's app/Http/Controllers folder
             __DIR__.'/unstarter_controllers' => base_path('app/Http/Controllers'),
 
-        // publish  Models to the app's app/Http/Controllers folder
+        // publish  Models to the app's app/Models folder
             __DIR__.'/unstarter_models' => base_path('app/Models'),
 
         // publish  Helpers to the app's app/Http/Controllers folder
