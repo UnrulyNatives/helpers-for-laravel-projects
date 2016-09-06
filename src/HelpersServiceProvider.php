@@ -22,15 +22,15 @@ class HelpersServiceProvider extends ServiceProvider
         // publish view files for the UN Starter Kit
             __DIR__.'/unstarter_views' => base_path('resources/views/unstarter'),
 
-        // publish app files (Models, Controllers, etc.) for the UN Starter Kit
+        // publish app files (the route file, Models, Controllers, etc.) for the UN Starter Kit
         // UNFINISHED! 
             __DIR__.'/unstarter_app' => base_path('unstarter'),
 
         // publish  Controllers to the app's app/Http/Controllers folder
-            __DIR__.'/unstarter_controllers' => base_path('app/Models'),
+            __DIR__.'/unstarter_controllers' => base_path('app/Http/Controllers'),
 
         // publish  Models to the app's app/Http/Controllers folder
-            __DIR__.'/unstarter_models' => base_path('app/Http/Controllers'),
+            __DIR__.'/unstarter_models' => base_path('app/Models'),
 
         // publish  Helpers to the app's app/Http/Controllers folder
             __DIR__.'/unstarter_helpers' => base_path('app/Helpers'),
