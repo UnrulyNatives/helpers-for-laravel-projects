@@ -39,5 +39,14 @@ class HelpersController extends Controller
 
     }
 
+    public function docs()
+    {
+
+
+        return "The Unrulynatives/Helpers package is working!";
+
+
+    }
+
 
 }

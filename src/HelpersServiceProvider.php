@@ -39,6 +39,10 @@ class HelpersServiceProvider extends ServiceProvider
         // publish  Middleware to the app's app/Http/Controllers folder
             __DIR__.'/unstarter_middleware' => base_path('app/Http/Middleware'),
 
+        // publish  public folder content: css and js
+        // Public
+            __DIR__.'/../public' => public_path(''),
+
 
             
         ]);

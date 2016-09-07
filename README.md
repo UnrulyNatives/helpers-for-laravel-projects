@@ -13,10 +13,11 @@ With time, this package would contain all modifications of the bare Laravel app.
 
 - some usefull css and jQuery tools included. See the Starter kit for details and examples: http://dev.unrulynatives.com/feature
 
+
 ## Installation
 
 1. Add 
-	`"unrulynatives/helpers": "0.1.2"`
+	`"unrulynatives/helpers": "0.1.4"`
 to your composer.json file.
 
 2. Add this to your `config/app.php` file in packages section
@@ -40,7 +41,7 @@ class User extends Authenticatable
 use UserExtensions;`
 
 
-5. Register trait with useful for models
+5. Register trait in other models
 In your model file declare:
 `use Unrulynatives\Helpers\ModelExtensions;
 
