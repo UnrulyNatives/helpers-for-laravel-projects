@@ -15,6 +15,20 @@ class Package extends Model
     public $timestamps = false;
 
     protected $table = 'packages';
+    
+    public function importances() {
+        return $this->hasMany(\App\Models\Userattitude::class, 'creator_id');
+    }
+    
+    public function attitudes() {
+        return $this->hasMany(\App\Models\Userattitude::class, 'creator_id');
+    }
+
+
+    public function user_approach($user)
+    {
+        return $this->morphMany(\App\Models\Userattitude::class, 'item')->where('creator_id', ($user ? $user->id : NULL))->first();
+    }
 
 	
 }
