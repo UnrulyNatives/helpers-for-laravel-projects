@@ -30,5 +30,13 @@ class Package extends Model
         return $this->morphMany(\App\Models\Userattitude::class, 'item')->where('creator_id', ($user ? $user->id : NULL))->first();
     }
 
+
+    public function showAvatar()
+    {
+        return $this->morphMany(\App\Models\Avatar::class, 'item');
+    }
+
+
+
 	
 }

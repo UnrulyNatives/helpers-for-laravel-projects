@@ -32,4 +32,8 @@ class Feature extends Model
     }
 
 	
+    public function showAvatar()
+    {
+        return $this->morphMany(\App\Models\Avatar::class, 'item');
+    }
 }

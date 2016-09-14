@@ -5,8 +5,8 @@ This package contains some modifications made over a fresh installation of Larav
 
 With time, this package would contain all modifications of the bare Laravel app. In other words, as soon as you include this package in your composer.json, you will get fully working starter kit.
 
-
-
+Current version: 
+[![Latest Stable Version](https://poser.pugx.org/unrulynatives/helpers/v/stable)](https://packagist.org/packages/unrulynatives/helpers)
 ## Features
 
 - Gravatar for your User model
@@ -17,7 +17,7 @@ With time, this package would contain all modifications of the bare Laravel app.
 ## Installation
 
 1. Add 
-	`"unrulynatives/helpers": "0.*"`
+	`"unrulynatives/helpers": "^0.1"`
 to your composer.json file.
 
 2. Add this to your `config/app.php` file in packages section
