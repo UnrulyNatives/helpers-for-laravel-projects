@@ -39,6 +39,9 @@ class HelpersServiceProvider extends ServiceProvider
         // publish migrations for all registered packages 
             __DIR__.'/unstarter_migrations' => base_path('database/migrations'),
 
+        // publish seeds for all registered packages 
+            __DIR__.'/unstarter_seeds' => base_path('database/seeds'),
+
 
         // publish  Middleware to the app's app/Http/Controllers folder
             __DIR__.'/unstarter_middleware' => base_path('app/Http/Middleware'),
