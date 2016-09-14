@@ -17,13 +17,17 @@ class HelpersServiceProvider extends ServiceProvider
 
         // publishing the basic views
         $this->publishes([
+            // publish view files for the UN Starter Kit
+                __DIR__.'/unstarter_views' => base_path('resources/views/unstarter')
+        ], 'views');
+
+
+        $this->publishes([
+
             __DIR__.'/views' => base_path('resources/views/vendor/unrulynatives/helpers'),
 
-        // publish view files for the UN Starter Kit
-            __DIR__.'/unstarter_views' => base_path('resources/views/unstarter'),
 
-        // publish app files (the route file, Models, Controllers, etc.) for the UN Starter Kit
-        // UNFINISHED! 
+        // publish app files (the ROUTES file, Models, Controllers, etc.) for the UN Starter Kit
             __DIR__.'/unstarter_app' => base_path('unstarter'),
 
         // publish  Controllers to the app's app/Http/Controllers folder
@@ -35,24 +39,38 @@ class HelpersServiceProvider extends ServiceProvider
         // publish  Helpers to the app's app/Http/Controllers folder
             __DIR__.'/unstarter_helpers' => base_path('app/Helpers'),
 
+        // publish  Middleware to the app's app/Http/Controllers folder
+            __DIR__.'/unstarter_middleware' => base_path('app/Http/Middleware')
 
+        ], 'app');
+
+
+        $this->publishes([
         // publish migrations for all registered packages 
-            __DIR__.'/unstarter_migrations' => base_path('database/migrations'),
+            __DIR__.'/unstarter_migrations' => base_path('database/migrations')
+
+
+        ], 'migrations');
+
+
+        $this->publishes([
 
         // publish seeds for all registered packages 
             __DIR__.'/unstarter_seeds' => base_path('database/seeds'),
 
 
-        // publish  Middleware to the app's app/Http/Controllers folder
-            __DIR__.'/unstarter_middleware' => base_path('app/Http/Middleware'),
+        ], 'seeds');
+
+
+        $this->publishes([
 
         // publish  public folder content: css and js
         // Public
             __DIR__.'/../public' => public_path(''),
+        ], 'publicassets');
 
 
-            
-        ]);
+
 
     }
 

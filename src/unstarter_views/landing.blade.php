@@ -5,7 +5,7 @@
 @section('sidebar')
     @parent
 
-    <a href="{{URL::to('feature')}}">Features</a>
+    <a href="{{URL::to('unstarter/feature')}}">Features</a>
 @endsection
 
 
@@ -33,7 +33,7 @@ Current theme: {{ Theme::get() }}</div>
                     <a href="{{URL::to('unstarter/admin')}}">Admin panel</a>
                     <a href="{{URL::to('dashboard')}}">LTM Admin</a>
                     <a href="{{URL::to('unstarter/feature')}}">Features</a>
-                    <a href="{{URL::to('unstarter/packages')}}">Packages</a>
+                    <a href="{{URL::to('unstarter/package')}}">Packages</a>
                     <a href="{{URL::to('unstarter/frontend')}}">Frontend</a>
                     <a href="{{URL::to('unstarter/minitools')}}">JS & jQuery minitools</a>
                     <a href="{{URL::to('unstarter/snippets')}}">Snippets</a>

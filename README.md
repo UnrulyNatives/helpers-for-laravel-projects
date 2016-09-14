@@ -25,7 +25,23 @@ to your composer.json file.
 
 3. Publish views, css & jQuery files to your app:
 
-`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider"`
+`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --force`
+
+Should you wish to publish to `app` folder only selected resources, use these commands:
+
+- public assets (js, css)
+`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=public --force`
+
+- app files: Controllers, route files, Models
+`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=public --force`
+
+- migration files
+`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=migrations --force`
+
+- seed files
+`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=seeds --force`
+
+
 
 4. Register the package in your User model and wherever you see it is necessary - see features section.
 

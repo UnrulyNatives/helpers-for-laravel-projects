@@ -25,7 +25,7 @@ class FeatureController extends Controller
     public function index()
     {
         $features = Feature::all();
-        activity()->log('Feature index opened'); // spatie activity-log
+        // activity()->log('Feature index opened'); // spatie activity-log
         return view('unstarter.feature.index',compact('features'));
     }
 
