@@ -60,13 +60,20 @@ class FeatureController extends Controller
 
         
         $feature->demonstration_URL = $request->demonstration_URL;
-        $feature->package_id = $request->package_id;
+
+        if($feature->package_id == '') {
+            $feature->package_id = null;
+
+        } else {
+            $feature->package_id = $request->package_id;
+            
+        }
 
         
         
         $feature->save();
 
-        return redirect('feature');
+        return redirect('unstarter/feature');
     }
 
     /**

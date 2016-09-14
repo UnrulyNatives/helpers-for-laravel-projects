@@ -14,7 +14,7 @@ class AddPackageIdToFeaturesTable extends Migration
     public function up()
     {
         Schema::table('features', function (Blueprint $table) {
-    $table->integer('package_id')->unsigned();
+    $table->integer('package_id')->unsigned()->nullable()->default(null);
 
     // $table->foreign('package_id')->references('id')->on('packages');
         });

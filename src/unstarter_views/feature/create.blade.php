@@ -7,7 +7,7 @@
                 <button class = 'btn btn-danger'>Feature Index</button>
             </form>
             <br>
-            <form method = 'POST' action = '{{url("feature")}}'>
+            <form method = 'POST' action = '{{url("unstarter/feature")}}'>
                 <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
                 
                 <div class="form-group">
@@ -47,6 +47,9 @@
 @push('scripts_in_tail')
 
 {!! Html::script('js/select2.min.js') !!}
-{!! Html::script('js/select2_language_pl.js') !!}
 
+{!! Html::script('js/select2_language_pl.js') !!}
+    <script>
+        $(document).ready(function() { $("select").select2(); });
+    </script>
 @endpush       
