@@ -11,13 +11,13 @@ Current version:
 
 - Gravatar for your User model
 
-- some usefull css and jQuery tools included. See the Starter kit for details and examples: http://dev.unrulynatives.com/feature
+- some usefull css and jQuery tools included. See the DEMO in Starter kit for details and examples: http://dev.unrulynatives.com/feature
 
 
 ## Installation
 
 1. Add 
-	`"unrulynatives/helpers": "^0.1"`
+	`"unrulynatives/helpers": "^1.0"`
 to your composer.json file.
 
 2. Add this to your `config/app.php` file in packages section

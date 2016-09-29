@@ -42,7 +42,7 @@ trait UserExtensions
      */
     // protected $hidden = ['password', 'remember_token'];
 
-    public static function boot()
+    public static function bootUserExtensions()
     {
         parent::boot();
 

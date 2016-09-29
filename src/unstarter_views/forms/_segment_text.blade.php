@@ -1,9 +1,11 @@
 <div class=" p-a-1">
-    <div class="un_input_label "><i class="fa fa-angle-right icon"></i>_ {{trans('buttons.'.$fieldlabel)}} </div>
+	@unless(!isset($fieldlabel) || $fieldlabel == 'none')
+    	<div class="un_input_label "><i class="fa fa-angle-right icon"></i>_ {{trans('buttons.'.$fieldlabel)}} </div>
+    @endunless
     <div class=" {{ @$bg_color }}">
 
 
-        @include('unstarter.forms._field_text')
+        @include('forms._field_text')
 
     </div>
 </div>

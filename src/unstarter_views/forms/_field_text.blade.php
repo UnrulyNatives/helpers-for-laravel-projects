@@ -20,7 +20,7 @@
     @if($purpose == 'create')
         {!! Form::text($fieldname, @$preselected, array('class' => 'InputAddOn-field'.@$class, 'placeholder' => @$placeholder, 'maxlength' => @$maxlength, 'id' => @$id)) !!}
     @else
-        {!! Form::text($fieldname, $object->$fieldname, array('class' => 'InputAddOn-field'.@$class,'maxlength' => @$maxlength, 'id' => @$id)) !!}
+        {!! Form::text($fieldname, $object->$fieldname, array('class' => 'InputAddOn-field '.@$class,'maxlength' => @$maxlength, 'id' => @$id, 'placeholder' => @$placeholder)) !!}
     @endif
 
 

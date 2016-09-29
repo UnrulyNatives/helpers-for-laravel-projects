@@ -42,7 +42,7 @@ trait ModelExtensions
      */
     // protected $hidden = ['password', 'remember_token'];
 
-    public static function boot()
+    public static function bootModelExtensions()
     {
         parent::boot();
 

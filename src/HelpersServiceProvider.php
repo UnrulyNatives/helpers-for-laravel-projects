@@ -18,14 +18,13 @@ class HelpersServiceProvider extends ServiceProvider
         // publishing the basic views
         $this->publishes([
             // publish view files for the UN Starter Kit
-                __DIR__.'/unstarter_views' => base_path('resources/views/unstarter')
+            __DIR__.'/unstarter_views' => base_path('resources/views/unstarter'),
+            
+            __DIR__.'/views' => base_path('resources/views/vendor/unrulynatives/helpers'),
         ], 'views');
 
 
         $this->publishes([
-
-            __DIR__.'/views' => base_path('resources/views/vendor/unrulynatives/helpers'),
-
 
         // publish app files (the ROUTES file, Models, Controllers, etc.) for the UN Starter Kit
             __DIR__.'/unstarter_app' => base_path('unstarter'),
@@ -54,16 +53,12 @@ class HelpersServiceProvider extends ServiceProvider
 
 
         $this->publishes([
-
-        // publish seeds for all registered packages 
+            // publish seeds for all registered packages 
             __DIR__.'/unstarter_seeds' => base_path('database/seeds'),
-
-
         ], 'seeds');
 
 
         $this->publishes([
-
         // publish  public folder content: css and js
         // Public
             __DIR__.'/../public' => public_path(''),
