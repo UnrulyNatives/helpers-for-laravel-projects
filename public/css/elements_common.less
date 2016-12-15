@@ -1,3 +1,13 @@
+//////////////////////////////
+//
+// WANT TO ADD CHANGES? TAKE THIS FILE FROM PACKAGE IN UN HELPERS PROJECT
+//
+// DON'T FORGET TO STORE IT BACK TO IT!
+//
+////////////////////////////////
+
+
+
 // Import fonts
 
 @import url(//fonts.googleapis.com/css?family=Dosis:500|Roboto:300|Alegreya+Sans:500italic|Ubuntu+Condensed|Open+Sans:700italic,300&subset=latin,latin-ext);
@@ -68,16 +78,24 @@ article[id*="placeholder"]{
 article > p  {
     margin: .3rem auto;
     width: 70%;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
-article > h1, article > h2 {
+article > h1, article > h2, article > h3, article ul, article .un_widefull {
       width: 70%;
-    margin: .3rem auto;
+    margin: 2rem auto .3rem;
       /*text-align: center;*/
 }
+article > h3 {
+
+      font: italic 700 1.5rem 'Open Sans';
+}
+
 article > p:nth-of-type(1) {
       margin-top: 3rem;
     }
+article > h3 + p {
+  margin-top: 1.5rem!important;
+}
 
 article > figure  {
      max-width: 20rem;
@@ -97,6 +115,10 @@ article > figure > figcaption {
 article > figure > img {
     margin: .3rem auto;
     width: 90%;
+
+}
+
+article p ul {
 
 }
 
@@ -279,6 +301,22 @@ footer a i {
     align-content: flex-start;
 }
 
+
+// makes the width  even unregardedly to the content
+// http://stackoverflow.com/questions/7985021/css-flexbox-issue-why-is-the-width-of-my-flexchildren-affected-by-their-content
+.un_flex_even > * {
+
+      width: 0;
+    /*flex-basis: 200px;*/
+    /*flex-grow: 0;*/
+    /*flex-shrink: 0;*/
+        flex: 1 1 auto;
+}
+.un_flex_even {
+
+    justify-content: spaced-between;
+}
+
 .un_flex_wrap {
       flex-wrap: wrap;
 }
@@ -312,6 +350,60 @@ align-self: center;
   flex: 1 1 20rem;
 }
 
+
+    .un_presenter_4 {
+      /*flex-basis: 0;*/
+    }
+    .un_presenter_4 > * {
+      padding: 1.5rem;
+      /*flex-basis: 0;*/
+      width: 0;
+      flex-grow: 0;
+    }
+
+
+    .un_presenter_4 > div:nth-of-type(1) {
+      background: #222;
+    }
+
+    .un_presenter_4 > div:nth-of-type(2) {
+      background: #333;
+    }
+
+    .un_presenter_4 > div:nth-of-type(3) {
+      background: #444;
+    }
+
+    .un_presenter_4  h2 {
+      color: white!important;
+    }
+    .un_presenter_4  h4 {
+      color: #ddd!important;
+      font-size: 110%;
+    }
+    .un_presenter_4  p  {
+      font-size: 1.2rem;
+      color: #66bbf7!important;
+    }
+    .un_presenter_4 a  {
+      font-size: 1.2rem;
+      color: #b4d2d0!important;
+      display: inline-block;
+    }
+    .un_presenter_4:hover a  {
+      font-size: 1.2rem;
+      color: #fbffd7!important;
+    }
+
+
+
+.un_presenter_5 {
+  
+}
+
+.un_presenter_5 p {
+    /*font-size: 1.4rem!important;*/
+}
 
 
 .un_flex > i {
@@ -515,24 +607,17 @@ h2 span {
 }
 
 
-.un_nav > * {
+.un_nav > *:not("i") {
   font-family: 'Ubuntu Condensed', sans-serif;
   border: 0;
     box-shadow: 
      inset 0px 0px 10px 5px rgba(38,31,31,.2)
     , 2px 2px 3px 1px rgba(18,11,11,.3);
+  padding: .2rem ;
 
 }
-
-
-.un_nav i {
-  font: normal normal normal 14px/1 FontAwesome;
-}
-
-
 
 .un_nav > * > i {
-  font: normal normal normal 14px/1 FontAwesome;
   padding: .2rem .4rem;
   margin-right: .5rem;
   background: @cstep3;
@@ -557,14 +642,7 @@ h2 span {
   background: @alert !important;
 }
 .un_statistic {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin: 1em 0em;
   max-width: auto;
@@ -591,6 +669,38 @@ h2 span {
 }
 
 
+
+.un_statistic_2:hover {
+  text-decoration: none;
+
+}
+.un_statistic_2 {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 1rem 0em;
+  max-width: auto;
+
+  border-radius: 5px;
+  padding: .4rem;
+  width: 100%;
+}
+
+.un_statistic_2  .value {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 3rem!important;
+  font-weight: bold;
+  /*line-height: 1rem;*/
+  color: #1b1c1d;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem;
+}
+
+.un_statistic_2 h4 {
+    font-size: 1rem;
+    text-align: center;
+    padding: .4rem;
+}
 
 
 
@@ -631,6 +741,53 @@ h2 span {
     text-align: center;
     border-radius: 5px;
 }
+
+
+
+.un_statistic_sm_2 {
+  display: flex !important;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 24rem;
+  max-width: 100%;
+  flex-direction: row;
+  margin: .4rem .2rem;
+  padding: .3rem;
+  background-image: linear-gradient(-180deg, #15140F 0%, #34312C 97%);
+    box-shadow: inset 0 0 10px 5px rgba(38,31,31,.2),2px 2px 3px 1px rgba(18,11,11,.3);
+
+  color: @step3;
+  /*border-radius: 5px;*/
+  font-size: 1rem;
+  flex: 0 1 auto !important;
+  align-items: center;
+  align-self: center;
+}
+.un_statistic_sm_2:hover {
+    text-decoration: none
+
+}
+.un_statistic_sm_2 i {
+    color: @step3;
+    margin-right: .5rem;
+
+}
+
+.un_statistic_sm_2 > div {
+  padding: .4rem;
+  flex: 1 1 auto;
+}
+
+.un_statistic_sm_2 > div:last-of-type {
+    background: @cstep1;
+    min-width:20%;
+    max-width:30%;
+    flex: 1 1 4rem;
+    text-align: center;
+    /*border-radius: 5px;*/
+}
+
+
 
 
 
@@ -688,7 +845,7 @@ h2 span {
  {
     width: 100%!important;
     margin: 0 auto 2rem!important;
-    padding: .5rem;
+    /*padding: .5rem;*/
     border-radius: 0 0 12px 12px;
     border: 0 solid #000;
     /*background: red*/
@@ -870,22 +1027,22 @@ div:hover > .tb2 a
 
 
 
-// dark1  black-gradient (old dark4)
-// dark2  black-brown (old dark7) 
+// dark_1  black-gradient (old dark4)
+// dark_2  black-brown animated (old dark7) 
 
 
 
 
 .csch_dark_1, .pusher > article:nth-of-type(odd) {
-    background: #232526; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #232526; // fallback for old browsers 
+    /*background: -webkit-linear-gradient(to left, #232526 , #414345); */
+    /*background: linear-gradient(to left, #232526 , #414345);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(-180deg, #504D48 5%, #33342F 96%);
     color: @step4 !important;
 }
 
 
-.csch_dark_2, 
-.un_quote#inspiration {
+.csch_dark_2 {
   background: linear-gradient(326deg, rgba(65,63,61,.84) , rgba(45,43,41,.7), rgba(65,63,71,.9));    
   /*background: linear-gradient(297deg, #413f3d, #373533, #413f47, #8f6fee);*/
   color: @step4 !important;
@@ -903,7 +1060,7 @@ div:hover > .tb2 a
 
 
 
-// dark3 red-gradient (old dark2) 
+// dark_3 red-gradient (old dark2) 
 
 
 .csch_dark_3,
@@ -931,7 +1088,7 @@ div:hover > .tb2 a
 
 
 
-// dark5 green-gradient old dark3
+// dark_5 green-gradient old dark3
 
 
 .csch_dark_5,
@@ -947,14 +1104,14 @@ div:hover > .tb2 a
 // dark6 green uniform new
 
 
-// dark7 blue gradient old dark1
+// dark_7 blue gradient old dark1
 .csch_dark_7, .un_interwoven {
     background: #485563 !important; /* fallback for old browsers */
     /* background: #485563;  fallback for old browsers */
     background: linear-gradient(to left, #485563 , #29323c) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     // font-size: 2rem;
     // color: red !important; 
-    color: #333;
+    /*color: #333;*/
 }
 
 
@@ -970,47 +1127,123 @@ color: @step4 !important;
 }
 
 // dark9 
+
+
+.csch_dark_9 {
+    background: #607D8B;
+
+    color: @step4 !important;
+}
+
 // dark10 
 
+.csch_dark_10 {
+    background: rgba(85,115,129,1)!important;
 
+    color: @step4 !important;
+}
 
-
-.csch_subtle1 {
-background: @step1 !important; /* fallback for old browsers */
-    /* background: #485563;  fallback for old browsers */
-    background: linear-gradient(to left, @step1 , @cstep1) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.csch_dark_11 {
+    background: rgba(35, 37, 38, 0.15)!important;
+    background: linear-gradient(to right,rgba(35, 37, 38, 0.15) 0,rgba(108, 192, 237, 0.07) 44%,rgba(60, 104, 126, 0.22) 100%);
+    color: @step4 !important;
 }
 
 
 
-.csch_subtle2 {
+.csch_subtle_12 {
+  background: linear-gradient(132deg, rgba(251, 18, 18, 0.1), rgba(181, 28, 23, 0.1));
+background-size: 400% 400%;
+
+animation: Animation_csch12 30s ease infinite;
+
+@keyframes Animation_csch12 { 
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+}
+
+.csch_subtle_13 {
+  background: linear-gradient(132deg, rgba( 1, 1,151, 0.05), rgba( 12, 13,91, 0.1));
+background-size: 400% 400%;
+
+animation: Animation_csch13 30s ease infinite;
+
+@keyframes Animation_csch13 { 
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+}
+
+
+
+
+
+.csch_subtle_1 {
+  // https://github.com/evankarageorgos/hue/blob/master/partials/_nearlight.scss
+background: #B7B6BB !important; /* fallback for old browsers */
+    /* background: #485563;  fallback for old browsers */
+.nearLight {
+  background-image: radial-gradient(at top right, #B7B6BB 0%, #E8EAE9 100%);
+}
+}
+
+
+
+.csch_subtle_2 {
     color: @normal; 
     /*background: @cstep2 !important; */
     background-image: linear-gradient(to bottom,rgba(30, 60, 90,.2) 0,rgba(34, 34, 124,.1) 100%);
 }
-.csch_subtle2:hover i {text-decoration: none; background:@cstep2; color: @bgemph;}
-.csch_subtle2:before  {color: @bgemph;}
+.csch_subtle_2:hover i {text-decoration: none; background:@cstep2; color: @bgemph;}
+.csch_subtle_2:before  {color: @bgemph;}
 
 
 
-.csch_subtle3 {
+.csch_subtle_3 {
     background: rgba(147,128,108,.1);
-    color: @cstep3;
+    /*color: @cstep3;*/
 }
 
-.csch_subtle4 {
+.csch_subtle_4 {
 
     border: 1px solid rgb(187, 187, 187);
     background: @bgbox;
     box-shadow: 0 0 5px 0 rgb(204, 204, 204);
 }
 
-.csch_subtle5 {
+.csch_subtle_5 {
 
 
     background: @cstep2;
     box-shadow: 0 0 5px 0 @cstep3;
+}
+.csch_subtle_6 {
+
+background: linear-gradient(1deg, rgba(147,128,108,.1), rgba(147,128,108,.3));
+
+}
+
+.csch_subtle_7 {
+
+background: linear-gradient(1deg, rgba(127,128,148,.1), rgba(127,128,148,.2));
+
+}
+// https://github.com/evankarageorgos/hue/blob/master/partials/_amnesia.scss
+.csch_subtle_8 {
+background-color: #DCD9D4;
+background-image: 
+    linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%),
+    radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+background-blend-mode: soft-light,screen;
+
+}
+
+
+.csch_subtle_fix_on_dark {
+  color: white;
 }
 
 
@@ -1027,8 +1260,8 @@ background: @step1 !important; /* fallback for old browsers */
 }
 
 [class*="csch_bright"] *.btn {
-    color: #333 !important;
-    background: #ffe !important;
+/*    color: #333 !important;
+    background: #ffe !important;*/
 }
 
 
@@ -1162,15 +1395,6 @@ animation: animbg 16s ease infinite;
     min-width: 20%;
     max-width: 20%
 }
-
-.un_smaller  {
-font-size: 70%;
-}
-
-.csch_contrastfont[class*="csch_subtle"] {
-  color: @step3!important;
-}
-
 
 .un_padding0 {
   padding: 0;
@@ -1468,6 +1692,9 @@ font-size: 70%;
 div[class^="communique"] p > a {
     text-decoration: underline;
 }
+div[class^="communique"] p > a:hover {
+    text-decoration: none!important;
+}
 
 div[class^="communique"] + div[class^="communique"]{
     margin-top: 1rem;
@@ -1584,36 +1811,6 @@ div[class^="communique"] + div[class^="communique"]{
 .Media-body:last-child {
     margin-bottom: 0
 }
-
-
-
-/*taken from http://www.jasny.net/bootstrap/css/*/
-.btn-labeled {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    text-indent: 0;
-}
-
-.btn-label, .btn-labeled > i {
-    position: relative;
-    background: 0 0;
-    background: rgba(0,0,0,.15);
-    display: inline-block;
-    padding: 6px 12px  !important;
-    top: 0px; /*override of bootstrap*/
-    border-radius: 3px 0 0 3px;
-    
-    margin-right: .4rem;
-    /*left: -12px;*/
-}
-
-.btn > span {
-  background: @cstep2;
-  padding: .4rem .6rem;
-  color: @alert2;
-}
-
 
 
 .un_btn_lg {
@@ -1944,6 +2141,7 @@ label {
   cursor: pointer;
   display: inline-block;
   margin-right: 0.5rem;
+  margin-top: 0.3rem;
   outline: none;
   position: relative;
 
@@ -1960,9 +2158,10 @@ label {
   position: absolute;
   content: '\2716';
   display: inline-block;
-  font-size: 26.66667px;
+  font-size: 24px;
   text-align: center;
   line-height: 40px;
+  margin: 2px 1px 1px;
 }
 .un_checkbox3:not(.sm) input:checked::after {
 
@@ -2628,6 +2827,10 @@ label {
      background: none; 
      color: white;
 }
+.un_flex_even > * {
+      width: 100%;
+      flex-direction: column;
+}
 
 
     .un_object > img {
@@ -2682,6 +2885,10 @@ label {
     }
 
 
+.un_title {
+  margin: .2rem;
+}
+
     .un_statistic {
 
       display: flex !important;
@@ -2715,5 +2922,51 @@ label {
         padding: 0;
     }
 
+
+
+    .un_presenter_4 {
+      /*flex-basis: 0;*/
+      background: green;
+    }
+    .un_presenter_4 > * {
+      padding: .5rem;
+      /*flex-basis: 0;*/
+      width: 100%;
+      flex-grow: 0;
+      flex-direction: column;
+      background: blue;
+    }
+
+
+    .un_presenter_4 > div:nth-of-type(1) {
+      background: #222;
+    }
+
+    .un_presenter_4 > div:nth-of-type(2) {
+      background: #333;
+    }
+
+    .un_presenter_4 > div:nth-of-type(3) {
+      background: #444;
+    }
+
+    .un_presenter_4  h2 {
+
+      font-size: 2rem!important
+    }
+    .un_presenter_4  h4 {
+      font-size: 1.6rem!important;
+
+      font-size: 110%;
+    }
+
+    .un_presenter_4  p {
+       /*padding: 1rem;*/
+    }
+
+
+.un_presenter_5 p {
+    font-size: 1.4rem!important;
+}
 
 }

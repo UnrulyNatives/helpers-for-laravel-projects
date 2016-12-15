@@ -26,6 +26,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 
 
 
+
 Route::get('login/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
