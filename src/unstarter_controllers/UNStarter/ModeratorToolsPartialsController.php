@@ -67,6 +67,8 @@ public function change_field_value($itemkind,$field,$itemid,$newval='1') {
 
 
 
+    $date = new \DateTime;
+
    $itemtype = str_singular($itemkind);
     $class_name = ucfirst($itemtype);
     $name = "App\\Models\\" . $class_name;
@@ -76,7 +78,15 @@ public function change_field_value($itemkind,$field,$itemid,$newval='1') {
 
         $object = $class->find($itemid);
         $object->$field = $newval;
+
+        if(Auth::check()) {
+            $object->acknowledger_id = Auth::id();
+        }
+        $object->acknowledged_at = $date;
+
+
         $object->save();
+        return "Done! ".$newval;
         return "Pole ".$field." zmienione na ".$newval;
 
     } else {
