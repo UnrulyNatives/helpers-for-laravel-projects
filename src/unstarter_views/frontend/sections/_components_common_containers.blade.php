@@ -6,7 +6,7 @@ $boxes = ['un_container','un_block','un_box','un_objectbox','un_object','un_quot
   
 <div class="csch_dark2">
 @foreach($boxes as $box)
-         <div class="{{$box}} csch_dark{{rand(1,7)}}">
+         <div class="{{$box}} csch_dark_{{rand(1,7)}}">
                 <img src="{{URL::to('avatars/_empty_user.jpg')}}"
                     <h2>h2 {{$box}}</h2>
                     <h4>h4 {{$box}}</h4>
@@ -30,6 +30,7 @@ un_corner
 un_statistic
 un_errors
 un_profile
+un_presenter
                             <h2>MODIFIERS flexh</h2>
 
 <!-- theme: Fawkes semantic-ui f:f -->
@@ -49,6 +50,19 @@ widefull
 
 padding1
 padding2
+
+
+<div class="m-3 p-1">
+    
+          @foreach([1,2,3,4,5] as $count)
+
+             <div class="un_presenter_{{$count}} csch_dark_1">
+                  <h4>un_presenter_{{$count}}</h4>
+                  <p>A paragraph of text</p>
+              </div>
+          @endforeach 
+
+</div>
 
 
                     <h2>in production</h2>

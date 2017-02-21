@@ -1,0 +1,126 @@
+
+/* Controls
+---------------------------------------------------------------------- */
+
+.controls {
+    padding: 1rem;
+    background: #333;
+    font-size: 0.1px;
+}
+
+.controls > span{
+    padding: 1rem;
+    background: #333;
+    color: #aaa;
+    /*font-size: 0.1px;*/
+    font: normal 300 1.1rem 'Ubuntu Condensed';
+}
+
+
+body.viewmode_printer .controls {
+
+    background: #ddd;
+
+}
+
+.control {
+    position: relative;
+    display: inline-block;
+    padding: .5rem;
+    background: #444;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 800;
+    color: white;
+    transition: background 150ms;
+}
+
+.control:hover {
+    background: #3f3f3f;
+}
+
+.mixitup-control-active {
+    background: rgba(76, 98, 146, 0.73);
+}
+
+.control:first-of-type {
+    border-radius: 3px 0 0 3px;
+}
+
+.control:last-of-type {
+    border-radius: 0 3px 3px 0;
+}
+
+/* Container
+---------------------------------------------------------------------- */
+
+.container {
+    padding: 1rem;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+/* Target Elements
+---------------------------------------------------------------------- */
+
+.mix,
+.gap {
+    /*display: flex;*/
+    /*vertical-align: top;*/
+}
+
+.mix {
+    background: #fff;
+    flex: 1 1 auto;
+    width: 100%;
+    border-top: .5rem solid currentColor;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #555;
+    font-family: 'helvetica-neue', arial, sans-serif;
+}
+
+
+.mix.green {
+    color: #91e6c7;
+}
+
+.mix.pink {
+    color: #d595aa;
+}
+
+.mix.blue {
+    color: #5ecdde;
+}
+
+.mix p {
+    padding: 1rem;
+    display: inline-block;
+    font-size: calc(1vw + .5rem);
+    color: #333;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+/* Grid Breakpoints
+---------------------------------------------------------------------- */
+
+/* 2 Columns */
+
+.mix,
+.gap {
+    width: 100%;
+}
+
+
+
+
+.controls button {
+  border: 2px solid #666;
+  margin: 0 .4rem;
+}
+
