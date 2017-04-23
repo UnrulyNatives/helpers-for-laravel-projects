@@ -19,7 +19,7 @@ trait UserExtensions
 
 {
     use Authenticatable, Authorizable, CanResetPassword;
-    use AdminPermissionsTrait, HasRoles;
+    use HasRoles;
 
 
     /**
