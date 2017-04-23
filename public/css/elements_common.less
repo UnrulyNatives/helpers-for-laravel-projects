@@ -16,6 +16,10 @@
 // PAGE LAYOUT
 //
 ////////////////////////////////
+p:not(:last-child), ul:not(:last-child) {
+    margin-bottom: 20px;
+}
+
 
 
 img.gravatar {
@@ -312,6 +316,7 @@ footer a i {
 .un_flex_even {
 
     justify-content: spaced-between;
+    width: : 100%;
 }
 
 
@@ -646,6 +651,16 @@ h2 span {
 .un_statistic_2 h4 {
     font-size: 1rem;
     text-align: center;
+    padding: .4rem;
+}
+
+
+.un_statistic_3{
+  font-size: 3rem;  
+  color: #1b1c1d;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem;
     padding: .4rem;
 }
 
@@ -1015,6 +1030,31 @@ background-blend-mode: normal,multiply;
 
 
 
+.un_presenter_7, .un_comment_1 {
+  width: 100%;
+    background: rgba(30,30,30,.3);
+  > img, > a {
+    background: rgba(30,30,30,.3);
+    width: 3rem;
+    height: 3rem;
+  }
+  h5 {
+    color: #aaa;
+  }
+  > a {
+    margin: .3rem;
+    padding: .3rem;
+  }
+  > a > img{
+    width: 100%;
+    max-width: 100%;
+  }
+  > div > div:last-of-type {
+    background: rgba(30,30,30,.3);
+    max-width: 12rem;
+    padding: .4rem;
+  }
+}
 
 
 .un_count {
@@ -1220,6 +1260,12 @@ color: @step4 !important;
 .csch_dark_11 {
     background: rgba(35, 37, 38, 0.15)!important;
     background: linear-gradient(to right,rgba(35, 37, 38, 0.15) 0,rgba(108, 192, 237, 0.07) 44%,rgba(60, 104, 126, 0.22) 100%);
+    color: @step4 !important;
+}
+
+.csch_dark_12 {
+    background: rgba(75, 57, 58, 0.75)!important;
+    background: linear-gradient(to right,rgba(75, 57, 58, 0.75) 0,rgba(108, 192, 237, 0.07) 44%,rgba(60, 104, 126, 0.22) 100%);
     color: @step4 !important;
 }
 
@@ -2048,6 +2094,23 @@ div[class^="communique"] + div[class^="communique"]{
 }
 
 
+.un_communique_2 {
+    padding: 1rem;
+    border-left: 10px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+    font-weight: 600;
+    > i {
+      /*font-size: 250%;*/
+      margin-right: 2rem; 
+    }
+}
+
+
+
+
+
+
 .un_btn_lg {
     border: 2px solid rgba(211,208,193,.06);
     border-radius: 3px;
@@ -2090,7 +2153,30 @@ div[class^="communique"] + div[class^="communique"]{
 //
 ////////////////////////////////
 
-pre
+
+.code-block {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.code-block {
+    background: rgba(0,0,0,0.1);
+    border-left: 10px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    text-align: left;
+    white-space: pre-wrap;
+    width: 100%;
+}
+
+pre {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    word-wrap: break-word;    
+}
+
+/*pre
 {
 
     width: 80%;
@@ -2121,7 +2207,7 @@ pre span
     padding: .3rem;
 
     background: @bgbox;
-}
+}*/
 
 
 
@@ -2307,6 +2393,81 @@ label {
 
 
 
+.un_checkbox_3 {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+
+    * { box-sizing: border-box; user-select: none; }
+
+}
+
+
+    .un_checkbox_3 input { height: 0; width: 0; }
+
+    .un_checkbox_3 input + label{
+      position: relative;
+      display: flex;
+      margin: .6em 0;
+      align-items: center;
+      color: #9e9e9e;
+      transition: color 250ms cubic-bezier(.4,.0,.23,1);
+    }
+    .un_checkbox_3 input + label > ins{
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 2em;
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+      transition: height 300ms cubic-bezier(.4,.0,.23,1);
+    }
+    .un_checkbox_3 input + label > ins > i{
+      position: absolute;
+      bottom: 0;
+      font-style: normal;
+      color: #4FC3F7;
+    }
+    .un_checkbox_3 input + label > span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1em;
+      width: 1em;
+      height: 1em;
+      background: transparent;
+      border: 2px solid #9E9E9E;
+      border-radius: 2px;
+      cursor: pointer;  
+      transition: all 250ms cubic-bezier(.4,.0,.23,1);
+    }
+
+    .un_checkbox_3 input + label:hover, .kl_checkbox_3 input:focus + label{
+      color: #fff;
+    }
+    .un_checkbox_3 input + label:hover > span, .kl_checkbox_3 input:focus + label > span{
+      background: rgba(255,255,255,.1);
+    }
+    .un_checkbox_3 input:checked + label > ins{ height: 100%; }
+
+    .un_checkbox_3 input:checked + label > span{
+      border: .5em solid #FFEB3B;
+      animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+    }
+    .un_checkbox_3 input:checked + label > span:before{
+      content: "";
+      position: absolute;
+      top: .2rem;
+      left: .1rem;
+      border-right: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      transform: rotate(45deg);
+      transform-origin: 0% 100%;
+      animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
+    }
+
 
 
 .text-greenish {
@@ -2327,9 +2488,24 @@ label {
 .bg-grey {
   background: #666!important;
 }
+.bg-green {
+  background: #6a6!important;
+  color: white;
+}
 
 .bg-yellow {
   background: #dbd75f!important;
+}
+
+
+.bg-red {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.bg-blue {
+    background: @normal2;
+    color: #fff;
 }
 
 
@@ -2486,7 +2662,15 @@ label {
   z-index: 100;
 }
 
+.un_checkbox_4.un_flex_vs > * {
+ width: 100%;
+ background: red;
+ margin: .5rem;
+}
+.un_checkbox_4.un_flex_vs > div > label {
+ width: 100%!important;
 
+}
 
 //////////////////////////////
 //

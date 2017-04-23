@@ -34,7 +34,7 @@ class HelpersController extends Controller
     {
 
 
-        return Auth::user()->gravatar();
+        return Auth::user()->gravatar;
 
 
     }
