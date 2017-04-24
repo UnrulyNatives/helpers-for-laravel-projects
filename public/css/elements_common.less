@@ -582,7 +582,12 @@ h2 span {
   color: white!important;
 }
 
-
+.un_nav_2 {
+  padding: .5rem;
+  .btn {
+    padding: .2rem!important;
+  }
+}
 
 .nav-item {
     font: italic 700 1.3rem 'Open Sans';
@@ -2468,7 +2473,55 @@ label {
       animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
     }
 
-
+.un_checkbox_4 {
+  background: green;
+  li {
+    list-style: none;
+    font-size: 125%;
+    margin-bottom: 1em;
+    position: relative;
+  }
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+  padding-left: 2em;
+}
+input[type="checkbox"]+label:before,
+input[type="checkbox"]+label:after,
+input[type="radio"]+label:before {
+    content: '';
+    background: #ececec;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    transition: all ease .5s;
+}
+input[type="checkbox"]+label:after{
+    border-radius: 0;
+}
+input[type="checkbox"]:checked+label:after,
+input[type="radio"]:checked+label:before {
+    border-radius: 50% 0 50% 50%;
+    transition: all ease .75s;
+    transform: rotate( 45deg );
+    background: #666;
+    border: 1px solid #666;
+}
+input[type="checkbox"]:checked+label:before {
+    transition: all ease .75s;
+    border-radius: 0 50% 50% 0;
+    background: #666;
+    border: 1px solid #666;
+}
+}
 
 .text-greenish {
   color: #5ef9c6!important;

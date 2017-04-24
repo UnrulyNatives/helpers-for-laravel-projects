@@ -14,12 +14,12 @@ use App\Role;
 use Laraveldaily\Quickadmin\Observers\UserActionsObserver;
 // use Laraveldaily\Quickadmin\Traits\AdminPermissionsTrait;
 
-use Spatie\Permission\Traits\HasRoles;
+// use Spatie\Permission\Traits\HasRoles;
 trait UserExtensions  
 
 {
     use Authenticatable, Authorizable, CanResetPassword;
-    use HasRoles;
+    // use HasRoles;
 
 
     /**
