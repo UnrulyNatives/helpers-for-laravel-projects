@@ -1,6 +1,6 @@
 {
     "name": "unrulynatives/helpers",
-    "description": "Snippets, tools, views for Laravel 5.4 app",
+    "description": "Snippets, tools, views for Laravel > 5.3 app",
     "authors": [
         {
             "name": "Piotr Plebaniak",
@@ -8,8 +8,8 @@
         }
     ],
     "require": {
-        "php": ">=5.6.4",
-        "illuminate/support": ">=5.4.0"
+        "php": ">=7.0.0",
+        "illuminate/support": ">=5.5.0"
     },
     "autoload": {
         "psr-4": {

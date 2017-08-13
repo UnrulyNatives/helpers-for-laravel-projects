@@ -158,7 +158,8 @@ aside > [class^="un_"] {
 
 aside,
 .un_aside {
-  max-width: 16rem;
+  max-width: 24rem;
+  width: 24rem;
   text-align: center;
   background: @aside;
 
@@ -213,6 +214,18 @@ aside ol a {
 
 
 
+.un_description {
+    background: #ddd;
+    color: #444;
+    font-size: 1.2rem;
+    padding: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    > h4 {
+
+    }
+}
 
 .un_pageheader {
     margin: 0;
@@ -381,6 +394,8 @@ align-self: center;
 
 h2 span {
      text-align: center; 
+     font-size: 60%;
+
 }
 
 
@@ -434,7 +449,15 @@ h2 span {
 }
 
 
-
+.un_container_2 {
+    position: relative;
+    min-height: inherit!important;
+    width: 90%!important;
+    min-height: 8rem;
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+}
 
 .un_plate { 
   position: relative; 
@@ -1728,6 +1751,7 @@ animation: animbg 16s ease infinite;
     min-width: 16rem;
     padding: .3rem;
     font-size: 60%;
+    background: #333;
 }
 
 
@@ -2109,11 +2133,17 @@ div[class^="communique"] + div[class^="communique"]{
       /*font-size: 250%;*/
       margin-right: 2rem; 
     }
+    img {
+      max-width: 100%;
+    }
 }
 
 
 
-
+.un_btn { 
+  border: 0; 
+  background: #444;
+}
 
 
 .un_btn_lg {
@@ -2474,7 +2504,8 @@ label {
     }
 
 .un_checkbox_4 {
-  background: green;
+  /*background: green;*/
+  
   li {
     list-style: none;
     font-size: 125%;
@@ -2717,7 +2748,7 @@ input[type="checkbox"]:checked+label:before {
 
 .un_checkbox_4.un_flex_vs > * {
  width: 100%;
- background: red;
+ /*background: red;*/
  margin: .5rem;
 }
 .un_checkbox_4.un_flex_vs > div > label {
@@ -3306,14 +3337,14 @@ input[type="checkbox"]:checked+label:before {
     word-break: break-all;
 
     border: 2px dotted @alert2;
-    background: @step4;
+    background: @alert2;
 }
 .un_developer:before
 {
    content: "Developer output box";
    position: absolute; 
    top: .1rem;
-   color: @alert2;
+   color: #ddd;
 }
 
 
