@@ -17,11 +17,11 @@ Current version:
 ## Installation
 
 1. Add 
-    `"unrulynatives/helpers": "^1.0"`
+	`"unrulynatives/helpers": "^1.0"`
 to your composer.json file.
 
 2. Add this to your `config/app.php` file in packages section
-    `Unrulynatives\Helpers\HelpersServiceProvider::class,`
+	`Unrulynatives\Helpers\HelpersServiceProvider::class,`
 
 3. Publish views, css & jQuery files to your app:
 
@@ -34,6 +34,9 @@ Should you wish to publish to `app` folder only selected resources, use these co
 
 - app files: Controllers, route files, Models
 `php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=app --force`
+
+- app files: View files
+`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=views --force`
 
 - migration files
 `php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=migrations --force`

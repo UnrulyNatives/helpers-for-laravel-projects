@@ -1,6 +1,6 @@
 {
     "name": "unrulynatives/helpers",
-    "description": "Snippets, tools, views for Laravel > 5.3 app",
+    "description": "Snippets, tools, views for Laravel 5.4 app",
     "authors": [
         {
             "name": "Piotr Plebaniak",
