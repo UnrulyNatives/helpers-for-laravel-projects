@@ -1,8 +1,5 @@
 <!-- LOCAL FILES semantic framework -->
-
-{!! Html::style('css/bootstrap-4.0.0-alpha.6.min.css') !!}
-
-{!! Html::script('js/bootstrap-4.0.0-alpha.6.min.js') !!}
-
+{!! Html::style('css/bootstrap-4.0.0-beta.min.css') !!}
 {!! Html::style('css/font-awesome.min.css') !!}
-    <!-- END LOCAL FILES semantic framework -->
+{!! Html::script('js/bootstrap-4.0.0-beta.min.js') !!}
+<!-- END LOCAL FILES semantic framework -->

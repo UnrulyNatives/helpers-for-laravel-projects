@@ -22,6 +22,14 @@ class HelpersServiceProvider extends ServiceProvider
             
             __DIR__.'/views' => base_path('resources/views/vendor/unrulynatives/helpers'),
         ], 'views');
+        $this->publishes([
+            // publish view files for the UN Starter Kit
+            __DIR__.'/unstarter_views/auth' => base_path('resources/views/auth'),
+            
+            __DIR__.'/unstarter_views/layouts' => base_path('resources/views/layouts'),
+        ], 'viewslayouts');
+
+
 
 
         $this->publishes([
