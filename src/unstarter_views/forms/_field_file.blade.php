@@ -7,7 +7,7 @@
         {!! Form::text($fieldname, @$object->$fieldname) !!}
     @endif
 
-    </div>
+</div>
 
 
 

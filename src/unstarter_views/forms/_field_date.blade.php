@@ -5,9 +5,9 @@
             <div class="ui  big fluid labeled input">
 
                 @if($purpose == 'create')
-                	{!! Form::date($fieldname, Input::old($fieldname), array('class' => @$class, 'placeholder' => @$placeholder)) !!}
+                	{!! Form::date($fieldname, Input::old($fieldname), array('class' => @$class, 'placeholder' => @$placeholder, 'id'=> @$id)) !!}
                 @else
-                	{!! Form::date($fieldname, $object->$fieldname, array('class' => @$class, 'placeholder' => @$placeholder)) !!}
+                	{!! Form::date($fieldname, $object->$fieldname, array('class' => @$class, 'placeholder' => @$placeholder, 'id'=> @$id ))!!}
                 @endif
                 
 

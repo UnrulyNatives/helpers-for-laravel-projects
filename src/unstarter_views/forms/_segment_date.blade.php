@@ -1,3 +1,3 @@
-<div class="ui horizontal segment {{ @$fieldcolor }} inverted">
-    @include('unstarter.forms._field_date')
-    </div>
+<div class="ui horizontal segment {{ @$fieldcolor }} {{ @$bg_color }} inverted">
+    @include('forms._field_date')
+</div>

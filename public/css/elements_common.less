@@ -4,6 +4,8 @@
 //
 // DON'T FORGET TO STORE IT BACK TO THE PACKAGE!
 //
+// LAST MOD: 2017-08-28
+//
 ////////////////////////////////
 
 // Import fonts
@@ -290,7 +292,8 @@ footer a i {
 
 .un_flex_vs {
     flex-direction: column;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    justify-content: space-between;
     align-items: stretch;
 }
 
@@ -607,8 +610,29 @@ h2 span {
 
 .un_nav_2 {
   padding: .5rem;
+
   .btn {
     padding: .2rem!important;
+  }
+}
+
+.un_nav_3 {
+  font-size: 70%;
+  text-align: center;
+  padding: .5rem;
+  background: @step3;
+  border: 2px solid #aaa;
+  border-radius: 4px;  
+  > * {
+    padding: .2rem!important;
+    background: @step4;
+    border: none;
+    border-radius: 4px;  
+  }
+  > button:hover {
+    background: @cstep1;
+    color:#444;
+
   }
 }
 
@@ -878,20 +902,21 @@ h2 span {
 
 }
 
-.un_user 
-{
+.un_user {
     max-width: 100%;
     display: inline-block;
     height: 2.4rem;
+
+    img {
+        width: 2.4rem;
+        height: 2.4rem;
+            max-height: 2.4rem;
+            max-width: 2.4rem;
+    }
+
 }
 
-.un_user img
-{
-    width: 2.4rem;
-    height: 2.4rem;
-        max-height: 2.4rem;
-        max-width: 2.4rem;
-}
+.un_user 
 .un_user div
 {
 padding: .2rem;
@@ -910,6 +935,21 @@ padding: .2rem;
 }
 
 
+.un_user_2 {
+    max-width: 100%;
+    display: inline-block;
+    height: 3.6rem;
+
+    img {
+        width: 3.6rem;
+        height: 3.6rem;
+            max-height: 3.6rem;
+            max-width: 3.6rem;
+    }
+    div {
+      align-self: center;
+    }
+}
 
 .un_wrapper {
   margin: 1rem!important;
@@ -2145,6 +2185,19 @@ div[class^="communique"] + div[class^="communique"]{
   background: #444;
 }
 
+/*bordered button for dropbox*/
+.un_border_2 { 
+  border: 2px solid #999; 
+  /*background: #444;*/
+
+}
+/*bordered button for dropbox*/
+.un_border_1 { 
+  border: 2px solid #999; 
+  padding: 1rem;
+
+}
+
 
 .un_btn_lg {
     border: 2px solid rgba(211,208,193,.06);
@@ -2503,7 +2556,7 @@ label {
       animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
     }
 
-.un_checkbox_4 {
+.un_checkbox_5 {
   /*background: green;*/
   
   li {
@@ -2512,46 +2565,46 @@ label {
     margin-bottom: 1em;
     position: relative;
   }
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
-input[type="checkbox"]+label,
-input[type="radio"]+label {
-  padding-left: 2em;
-}
-input[type="checkbox"]+label:before,
-input[type="checkbox"]+label:after,
-input[type="radio"]+label:before {
-    content: '';
-    background: #ececec;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    transition: all ease .5s;
-}
-input[type="checkbox"]+label:after{
-    border-radius: 0;
-}
-input[type="checkbox"]:checked+label:after,
-input[type="radio"]:checked+label:before {
-    border-radius: 50% 0 50% 50%;
-    transition: all ease .75s;
-    transform: rotate( 45deg );
-    background: #666;
-    border: 1px solid #666;
-}
-input[type="checkbox"]:checked+label:before {
-    transition: all ease .75s;
-    border-radius: 0 50% 50% 0;
-    background: #666;
-    border: 1px solid #666;
-}
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="checkbox"]+label,
+  input[type="radio"]+label {
+    padding-left: 2em;
+  }
+  input[type="checkbox"]+label:before,
+  input[type="checkbox"]+label:after,
+  input[type="radio"]+label:before {
+      content: '';
+      background: #ececec;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      transition: all ease .5s;
+  }
+  input[type="checkbox"]+label:after{
+      border-radius: 0;
+  }
+  input[type="checkbox"]:checked+label:after,
+  input[type="radio"]:checked+label:before {
+      border-radius: 50% 0 50% 50%;
+      transition: all ease .75s;
+      transform: rotate( 45deg );
+      background: #666;
+      border: 1px solid #666;
+  }
+  input[type="checkbox"]:checked+label:before {
+      transition: all ease .75s;
+      border-radius: 0 50% 50% 0;
+      background: #666;
+      border: 1px solid #666;
+  }
 }
 
 .text-greenish {

@@ -12,4 +12,17 @@
 
     <small id="{{$fieldname}}Help" class="form-text text-muted">{{@$hint}}</small>
   </div>
+    <style type="text/css">
+    .counter {
+        width: 100%; 
+        display: block;
+        /*background: #f99;*/
+        border: 3px solid #885;
+        padding: .5rem;
+    }
+    #{{ $fieldname }} + .counter {
+        background: {{@$css_bgcolor}}!important;
+    }
+    </style>
+
 

@@ -38,6 +38,10 @@ Should you wish to publish to `app` folder only selected resources, use these co
 - app files: View files
 `php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=views --force`
 
+WARNING:
+- app files: View files to be copied to `resources/views/layouts/` folder
+`php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=viewslayouts --force`
+
 - migration files
 `php artisan vendor:publish --provider="Unrulynatives\Helpers\HelpersServiceProvider" --tag=migrations --force`
 
