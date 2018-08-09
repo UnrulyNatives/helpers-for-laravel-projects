@@ -1,7 +1,7 @@
 # laravel-helper
 A set of code snippets and functions to use across all projects. 
 
-This package contains some modifications made over a fresh installation of Laravel 5.3. 
+This package contains some modifications made over a fresh installation of Laravel 5.63. 
 
 With time, this package would contain all modifications of the bare Laravel app. In other words, as soon as you include this package in your composer.json, you will get fully working starter kit.
 
