@@ -6,7 +6,20 @@ jQuery( document ).ready( function( $ ) {
 
     $('[data-more-close]').slideUp();
 
+    console.log('slideUp1');
 } );
+
+
+
+
+// $(document).ready(function () {
+
+//     $('[data-more-close]').slideUp();
+//     console.log('slideUp1a');
+//     $(target).addClass('hidden');
+
+// });
+
 
 // toggles revealing of an element 
 $(function() {
@@ -14,6 +27,8 @@ $(function() {
         e.preventDefault();
         var target = '#' + $(this).data('more');
         $(target).slideToggle();
+        $(target).toggleClass('hidden');
+        console.log('slideUp2');
     });
 
 });

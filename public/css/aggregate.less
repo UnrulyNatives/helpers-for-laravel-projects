@@ -1,0 +1,726 @@
+@import url(//fonts.googleapis.com/css?family=Dosis:500|Alegreya+Sans:500italic|Open+Sans:700italic,300&subset=latin,latin-ext);
+
+
+
+/*FLEX solutions*/
+
+
+.un_flex {
+    display: flex !important;
+    flex-wrap: nowrap;
+}
+
+.un_flex_vt {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: start;
+}
+.un_flex_vc {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.un_flex_vs {
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.un_flex_hc {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.un_flex_ht {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.un_flex_hs {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+
+// makes the width  even unregardedly to the content
+// http://stackoverflow.com/questions/7985021/css-flexbox-issue-why-is-the-width-of-my-flexchildren-affected-by-their-content
+.un_flex_even > * {
+
+      width: 0;
+    /*flex-basis: 200px;*/
+    /*flex-grow: 0;*/
+    /*flex-shrink: 0;*/
+        flex: 1 1 auto;
+}
+.un_flex_even {
+
+    justify-content: spaced-between;
+    width: : 100%;
+}
+
+
+.un_flex_wrap {
+      flex-wrap: wrap;
+}
+
+.un_flex_sc {
+align-self: center;
+}
+.un_flex > div {
+  flex: 1 1 auto;
+  /*width: 90%;*/
+  max-width: 100%;
+}
+.un_flex > img {
+  flex: 1 1 16rem;
+}
+
+.un_flex > h3 {
+  width: 100%
+}
+
+.un_flex > h2, .un_flex > h3 {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.un_flex_c20 > * {
+  flex: 1 1 20rem!important;
+}
+
+.un_flex > .un_presenter_2 {
+  flex: 1 2 42rem;
+}
+.un_flex > .un_presenter_3 {
+  flex: 1 1 20rem;
+}
+
+
+
+
+
+
+
+body {
+	font-family: sans-serif;
+}
+
+h1 {
+	color: rgba(30, 102, 153, 1);
+	font-size: 2rem;
+}
+h1, h2 {
+	text-align: center;
+}
+h3 {
+	/*font-family: "Open Sans", sans-serif;*/
+	font: italic normal 700 2rem/120% "Open Sans", sans-serif;
+	text-align: center;
+	display: block;
+}
+h3 subtitle {
+	display: block;
+	text-align: center;
+	font-size: 60%;
+	padding-left: 1.5rem;
+	color: rgba(231, 239, 217, 1);
+	/*color: rgba(102, 255, 102, 1);*/
+}
+h4 {
+	padding-left: 3rem;
+	color: red;
+}
+h5 {
+	padding-left: 5rem;
+	color: rgba(255, 102, 0, 1);
+}
+
+intro h5 {
+	font-size: 2rem;
+	color: #444;
+}
+intro h5:before {
+	content: "Tematyka rozdziału: ";
+}
+
+.mb_title {
+	background: #999;
+	img {
+		/*text-align: left;*/
+		/*width: 3rem;*/
+		min-height: 7rem;
+		height: 8rem;
+		margin: .3rem;
+	}
+	div {
+		text-align: center;
+	}
+}
+
+motto {
+	display: block;
+	width: 80%;
+	margin: 2rem auto;
+	padding: 3rem;
+	/*border: 3px solid rgba(51, 68, 136, .3);*/
+	background: rgba(51, 58, 56, .1)!important;
+	text-align: center;
+	color:rgba(102, 102, 93, 1);
+	font: italic normal 500 1.9rem/120% "Alegreya Sans", serif;
+
+	h2 {
+		font-size: 2.3rem;
+	}
+	h5 {
+		font-size: 1.3rem;
+		padding: 0;
+	}
+}
+
+intro {
+	display: block;
+	margin: 3rem auto;
+	border: 3px dotted rgba(102, 153, 255, .5);
+	background: #ddd;
+	p {
+		margin: 0 8rem;
+		font-size: 120%;
+		color: #555!important;
+		text-align: justify;
+		text-indent: 1.3rem;
+	}
+	p:first-of-type {
+		margin-top: 3rem;
+	}
+	p:last-of-type {
+		margin-bottom: 3rem;
+	}
+	h2 {
+		padding: 1rem;
+	}
+	h3 {
+		padding: 1rem;
+		background: rgba(31, 90, 153, .6)!important;
+		color: white!important;
+	}
+	h3:before {
+		content: "Rozdział ";
+
+	}
+	h4 {
+		font: italic normal 500 1.9rem/120% "Alegreya Sans", serif;
+		text-align: center;
+		color: #855;
+	}
+}
+
+calligraphy.fullpage, calligraphy.long {
+/*background: rgba(245, 247, 246, .9);*/
+		display: block;
+		position: relative;
+		padding: 3rem;
+		padding-bottom: 8rem;
+		box-shadow: 
+     inset 0px 0px 10px 5px rgba(38,31,31,.2)
+    , 2px 2px 3px 1px rgba(18,11,11,.3);
+
+	background-image: url("../aggregated-books/peter_stamp1.jpg");
+	background-repeat: no-repeat;
+	background-size: 5rem 5rem;
+    background-position: right 2rem bottom 2rem;
+}
+	calligraphy.fullpage:before {
+		position: absolute;
+		top: .5rem;
+		left: 1rem;
+		padding: .3rem;
+		background: rgba(245, 247, 246, .3);
+		color: rgba(128, 123, 123, .7);
+		content: "Kaligrafia: ";
+		font-size: 1rem!important;
+		font-family: "Open Sans", sans;
+	}
+calligraphy.fullpage {
+	font-size: 4rem;
+}
+
+
+outbox {
+	position: relative;
+	display: block;
+	font: normal normal 300 1.2rem/120% "Open Sans", sans-serif;
+	margin: 3rem auto;
+
+	border: 5px dashed rgba(102, 102, 102, .3);
+	background: #eee;
+
+	calligraphy {
+		height: 5rem;
+		font-size: 3rem;
+		display: block;
+		position: relative;
+		color: #666;
+		text-align: center;
+		margin: 1.5rem auto;
+		padding: .3rem;
+		
+	}
+
+	p {
+		margin: .1rem 12rem;
+		color: #555;
+		text-align: justify;
+		text-indent: 1.3rem;
+		line-height: 130%;
+		font-size: 130%;
+	}
+	p:first-of-type {
+		margin-top: 3rem;
+	}
+	p:last-of-type {
+		margin-bottom: 5rem;
+	}
+
+	h5, h4 {
+		font: italic normal 700 2rem/120% "Open Sans", sans-serif;
+		color: rgba(102, 0, 51, .5);
+		background: rgba(102, 102, 102, .7);
+		text-align: center;
+		font-family: sans-serif;
+		padding: 1rem;
+	}
+	h5:before {
+		content: "OUTBOX: ";
+	}
+}
+
+
+
+sink {
+	display: block;
+	width: 80%; 
+	max-width: 100%;
+	padding: 2rem;
+	margin: 2rem auto;
+	background: rgba(255, 255, 85, .2);
+	color:rgba(51, 51, 51, 1);
+	/*display: none;*/
+}
+sink:before {
+	content:"Rozdział zawiera treści w trakcie opracowania";
+}
+
+candidate {
+		display: block;
+	width: 80%; 
+	max-width: 100%;
+	padding: 2rem;
+	margin: 2rem auto;
+	background: rgba(150, 143, 126, .12);
+	color:rgba(61, 61, 61, 1);
+}
+
+quote {
+	display: block;
+	width: 80%;
+	padding: 2rem;
+	/*margin: 5rem auto 5rem 1rem;*/
+	color: rgba(21, 72, 74, 1);
+	background: rgba(85, 85, 85, .1);
+	font-size: 1.7rem;
+
+
+}
+
+entry {
+	display: block;
+	margin: 3rem auto;
+	border: 5px solid rgba(53, 53, 53, .21);
+	background: #ddd;
+
+	quote {
+		/*display: block;*/
+		width: 100%;
+		background: rgba(53, 53, 53, .21);
+		margin: 0 auto 4rem;
+		text-align: center;
+		font: italic normal 500 1.7rem/120% "Alegreya Sans", serif;
+		
+
+		attribution {
+			display: block;
+			color: rgba(31, 82, 84, 1);
+			text-align: right;
+			font-size: 70%;
+			margin-top: 2rem;
+			margin-right: 10%;
+			font: normal normal 300 1.4rem/120% "Alegreya Sans", serif;
+		
+		} 
+		attribution:before {
+			content: "– ";
+		}
+
+	}
+	description {
+		display: block;
+		padding: 2rem;
+		color: #888;
+		font-size: 90%;
+	}
+
+	chinese {
+		display: block;
+		font-size: 2.2rem;
+		color: rgba(122, 102, 102, 1);
+	}
+	pinyin {
+		display: block;
+		font-size: 1rem;
+		color: rgba(102, 102, 102, 1);
+	}
+	h4, meaning {
+		font: italic normal 700 2rem/120% "Alegreya Sans", serif;
+		text-indent: 0;
+		padding: 0;
+		display: block;
+		font-size: 1.7rem;
+		color: rgba(174, 50, 59, 1);
+	}
+
+	thestory {
+		font: italic normal 500 1.5rem/120% "Alegreya Sans", serif;
+		color: rgba(102, 102, 93, 1);
+	}
+	p {
+		margin: 0 16rem;
+		text-indent: 1rem;
+		text-align: justify;
+		color: #555;
+		font-size: 1.5rem;
+	}
+
+	blockquote {
+		display: block;
+		width: 80%;
+		margin: 1rem auto;
+		border-left: 8px solid rgba(252, 225, 126, .6);
+		background: rgba(252, 225, 126, .1);
+		color: #444;
+		padding: 2rem;
+		line-height: 2;
+		font: normal normal 300 1.3rem/150% "Open Sans", serif;
+		
+	}
+	origin {
+
+		display: block;
+		width: 80%;
+		margin: 1rem auto;
+		color: rgba(102, 102, 113, 1);
+		font-size: 85%;
+		font-family: sans-serif;
+	}
+
+	originchinese {
+		display: none;
+	}
+	calligraphy {
+		background: rgba(245, 247, 246, .9);
+		display: block;
+		position: relative;
+		padding: 3rem;
+		box-shadow: 
+     inset 0px 0px 10px 5px rgba(38,31,31,.2)
+    , 2px 2px 3px 1px rgba(18,11,11,.3);
+	}
+	calligraphy.long {
+		font-size: 6rem;
+	}
+	calligraphy:before {
+		position: absolute;
+		top: .5rem;
+		left: 1rem;
+		padding: .3rem;
+		background: rgba(245, 247, 246, .3);
+		color: rgba(128, 123, 123, .7);
+		content: "Kaligrafia: ";
+		font-size: 1rem!important;
+		font-family: "Open Sans", sans;
+	}
+}
+
+
+summary {
+	background: rgba(221, 221, 221, .9);
+	color: #777;
+	padding: 2rem;
+	font: italic normal 700 1.7rem/120% "Alegreya Sans", serif;
+		
+}
+
+
+todo {
+	display: block;
+	padding: 1rem;
+	background: rgba(255, 0, 0, 0.318);
+}
+section[data-bookname="songs"] h3 {
+	font: italic normal 700 3rem/120% "Alegreya Sans", serif;
+	color: #555!important;
+}
+
+.hidden {
+	display: none!important;
+}
+
+section.hide {
+	width: 80%;
+	margin: .5rem auto!important;
+	padding: 0!important;
+	text-align: left!important;
+
+	p, pinyin, sink, thestory, origin, calligraphy, blockquote, intro p, motto, outbox {
+		/*background: red!important;*/
+		display:none!important;
+	}
+	quote {
+		margin: 0!important;
+		padding: .2rem!important;
+		background: none;
+	}
+	entry {
+		margin: .3rem;
+		border: 0!important;
+		background: none;
+		border-bottom: 2px dashed #777!important;
+
+
+	}
+	chinese {
+		padding: .4rem;
+		text-align: left;		
+		font-size: 2.5rem;
+		color: #644;
+		display:block!important;
+	}
+	h4, meaning {
+		font-size: 1rem;
+		text-align: left;
+		text-indent: 2rem;
+		color: rgba(74, 74, 74, 1);
+		display:block!important;
+
+	}
+	intro {
+		border: 0;
+		padding: .5rem!important;
+		h4 {
+			color: rgba(153, 0, 0, 1)!important;
+			font-size: 2rem!important;
+			padding: 1rem;
+			text-indent: 0!important;
+
+		}
+		h4:before {
+			content: "這章的內容: ";
+		}
+	}
+	originchinese {
+		display: block;
+		color:rgba(102, 102, 105, 1);
+
+	}
+	originchinese:before {
+
+		content:"出處: ";
+		
+	}
+
+}
+
+section.hide intro summary.hidden {
+	display: none!important;
+	
+}
+section.hide [rel="chapterface"] {
+	display: block!important;
+	color: #444!important;
+}
+
+section.hide a[href] {
+	display: none!important;
+	
+}
+section.hide meaning, section.hide h4 {
+	font-size: 1.6rem!important;
+	text-indent: 0!important;
+	
+}
+
+calligraphy {
+	display: block;
+	width: 70%;
+	text-align: center;
+	margin: 1rem auto;
+	font-size: 8rem;
+	color: rgba(86, 79, 78, 1);
+	/*background: rgba(68, 68, 68, .2);*/
+}
+
+
+footnote {
+	font-size: .2rem;
+	display: none;
+}
+
+section {
+	font-family: serif;
+	font-size: 1.3rem;
+	padding: 0 0 3rem;
+	border: 2px solid rgba(153, 85, 85, .1);
+	color: #679;
+	width: 90%;
+	margin: 2rem auto;
+	h2 {
+		margin-top: 0!important;
+		color: #444;
+		background: rgba(83, 85, 85, .3);
+		font-family: sans-serif;
+	}
+}
+section > p {
+	text-indent: 1rem;
+	margin-top: .8rem;
+}
+section > p:nth-of-type(odd) {
+	color: rgba(0, 51, 93, 1);
+}
+section > p:nth-of-type(even) {
+	color: rgba(0, 41, 83, 1);
+}
+
+
+collection {
+	background: #faa;
+	width: 100%;
+	quote {
+		display: block;
+		background: #ccc;
+		padding: 1rem;
+		attribution {
+			display: block;
+			text-align: right;
+			a {
+				color: green;
+			}
+		attribution:before {
+			content: "– ";
+		}
+			display: block;
+			color: orange;
+			cite {
+
+				color: yellow;
+			}
+		}
+	}
+
+	> span + span {
+		margin-left: 1rem;
+		color: red;
+	}
+	> span:nth-of-type(odd) {
+		color: rgba(183, 0, 0, 1);
+	}
+}
+
+
+figure {
+		width: 80%;
+		max-width: 100%;
+		margin: 2rem auto;
+	img {
+		max-width: 100%;
+	}
+	caption, span {
+		display: block;
+		margin: .3rem auto;
+	    text-align: center;
+	    color: navy;
+	    font-family: sans-serif;
+	}
+}
+
+
+
+
+.mb_quote {
+	margin-left: 4rem;
+	color: #77a!important;
+	font-variant: italic;
+}
+.mb_didaskalia {
+	padding: 1rem;
+	width: 80%;
+	margin: 4rem auto;
+	color: #556!important;
+	background: #ccc;
+}
+.mb_quote span {
+	display: block;
+	text-align: right;
+}
+
+removed {
+	padding: 3rem;
+	display: block;
+	background: #ddd;
+	color: #888;
+	
+}
+removed:before {
+	content: "Usunięte lub do późniejszej adaptacji: ";
+}
+
+nav {
+	background: rgba(119, 119, 119, .4);
+	margin: .1 auto;
+}
+nav a {
+	padding: .2rem .4rem;
+	margin: .2rem .1rem;
+}
+
+text-green {
+	color: rgba(0, 74, 0, 1)
+}
+
+.content-table {
+		font: italic normal 700 1.3rem/120% "Open Sans", sans-serif;
+		color: #555;
+		text-align: left;
+		
+	h3 {
+		font-size:90%;
+		color: #667!important;
+		text-align: left!important;
+
+	}
+	h4 {
+		font-size:80%;
+		margin-left: 1rem;
+		color: #445;
+
+	}
+}

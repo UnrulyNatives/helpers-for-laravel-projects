@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700i|Montserrat:400,800i|Ubuntu+Condensed&subset=latin-ext');
+
+/*inna para: Josefin Sans and Amatic SC*/
+/*
+font: normal normal 400 2rem/120% "Merriweather", serif; 
+font: italic normal 700 2rem/120% "Merriweather", serif; 
+
+
+font: normal normal 400 2rem/120% "Montserrat", sans-serif; 
+font: italic normal 800 2rem/120% "Montserrat", sans-serif; 
+
+
+font: normal normal 400 2rem/120% "Ubuntu Condensed", sans-serif; 
+*/
+
+
+/*############################*/
+/*ADJUST MATERIALCSS*/
+/*############################*/
+nav, .page-footer {
+    /*color: #fff;*/
+    background-color: rgba(102, 102, 87, 0.882);
+}
+
+
+
+
+
+
+.un_nav {
+  /*text-align: center;*/
+  padding: .3rem;
+  background: rgba(85, 85, 85, .1);
+}
+nav a {
+    /*color: white!important;*/
+    /*font: normal normal 400 1rem "Ubuntu Condensed", sans-serif; */
+}
+metainfo  {
+	display: block;
+	position: relative;
+	width: 80%;
+	margin: 2rem auto;
+	padding: 3rem;
+}
+quote {
+	display: block;
+	position: relative;
+	width: 80%;
+	margin: 2rem auto;
+	padding: 3rem;
+	min-height: 50%;
+	background: rgba(36, 36, 36, .1);
+	font: italic normal 700 2rem/120% "Merriweather", serif; 
+	color: rgba(36, 36, 36, .9);
+
+	attribution {
+		display: block;
+		text-align: right!important;
+		margin-right: 5rem;
+		color: rgba(36, 36, 36, .6);
+		font: normal normal 400 2rem/120% "Montserrat", sans-serif; 
+	}
+	p.nonpl {
+		color: #999;
+	}
+}
+
+/*#####################################*/
+
+/*COMMON ELEMENTS*/
+
+/*#####################################*/
+.un_feedback {
+ margin: .4rem;
+ padding: .3rem;
+ margin: 3rem auto;
+ display: block;
+ width: 50%;
+ min-width: 30rem;
+  border: 2px dashed rgba(51, 102, 255, 1);
+ border-left: 6px solid rgba(51, 102, 255, 1);
+ color: white!important;
+ background: #444;
+ em, span {
+  font: italic 700 1.3rem 'Open Sans'!important;
+ }
+}
+.un_feedback:before {
+  display: inline-block;
+  content: "Komunikat: ";
+}
+
+.un_feedback.needrefine {
+ border: 2px dashed yellow;
+ border-left: 6px solid yellow;
+}
+
+
+.un_feedback.error {
+ border: 2px dashed rgba(255, 51, 0, 1);
+ border-left: 6px solid rgba(255, 55, 0, 1);
+}
+
+.un_feedback.admin {
+ border: 2px dashed rgba(255, 153, 0, 1);
+ border-left: 6px solid rgba(255, 153, 0, 1);
+}
+
+.un_feedback.admin {
+ border: 2px dashed rgba(255, 153, 0, 1);
+ border-left: 6px solid rgba(255, 153, 0, 1);
+}
+.un_feedback:before {
+  display: inline-block;
+  background: #777;
+  padding: .1rem .3rem;
+  font-family: "Ubuntu Condensed";
+  content: "Feedback: ";
+
+}
+.un_feedback.admin:before {
+  border: 2px dashed rgba(255, 153, 0, 1);
+  content: "Okienko Admina: ";
+  color: rgba(255, 153, 0, 1);
+
+}

@@ -4,7 +4,7 @@
 //
 // DON'T FORGET TO STORE IT BACK TO THE PACKAGE!
 //
-// LAST MOD: 2017-08-28
+// LAST MOD: 2018-03-07
 //
 ////////////////////////////////
 
@@ -12,6 +12,7 @@
 
 @import url(//fonts.googleapis.com/css?family=Dosis:500|Roboto:300|Alegreya+Sans:500italic|Ubuntu+Condensed|Open+Sans:700italic,300&subset=latin,latin-ext);
 @import 'color_definitions_theme_1.less';
+
 
 //////////////////////////////
 //
@@ -22,7 +23,9 @@ p:not(:last-child), ul:not(:last-child) {
     margin-bottom: 20px;
 }
 
-
+.un_block {
+  display: block;
+}
 
 img.gravatar {
   width:2rem; height:2rem
@@ -282,6 +285,7 @@ footer a i {
 .un_flex_vt {
     flex-direction: column;
     justify-content: flex-start;
+    align-self: start;
 }
 .un_flex_vc {
     flex-direction: column;
@@ -366,7 +370,7 @@ align-self: center;
   flex: 1 1 20rem!important;
 }
 
-.un_flex > .un_presenter2 {
+.un_flex > .un_presenter_2 {
   flex: 1 2 42rem;
 }
 .un_flex > .un_presenter_3 {
@@ -582,6 +586,27 @@ h2 span {
        text-align: center;
        font-size: 120%;
 
+}
+
+
+
+.un_object_2 {
+  > img {
+    max-width: 8rem;
+    width: 8rem;
+    height: 6rem;
+    max-height: 6rem;
+  }
+  background: rgba(243,243,240,.14);
+  padding: .3rem;
+  > div {
+    padding: .6rem;
+  }
+  div > a {
+    font: italic 700 1.6rem 'Open Sans';
+    /*font-size: 2rem;*/
+    color: white;
+  }
 }
 
 
@@ -985,18 +1010,19 @@ background-blend-mode: normal,multiply;
 }
 .un_presenter_1 h3 {
  color: #5bc0de;
+ font-size: 2rem;
 }
 
 
 
 
-.un_presenter2, .un_presenter_3 {
+.un_presenter_2, .un_presenter_3 {
     background: @cstep3;
     padding-bottom: .5rem;
 }
 
 
-.un_presenter2 h4, .un_presenter2 h3, .un_presenter_3 h4, .un_presenter_3 h3 {
+.un_presenter_2 h4, .un_presenter_2 h3, .un_presenter_3 h4, .un_presenter_3 h3 {
   text-align: center;
   padding: .3rem;
   color: @step4;
@@ -1134,6 +1160,18 @@ background-blend-mode: normal,multiply;
 }.un_count:after {
   /*content: "%";*/
 
+}
+
+
+.un_border_4 {
+  border: 5px solid #2feca0;
+  padding: .3rem;
+  border-radius: 6px;
+}
+.un_border_3 {
+  border: 5px solid #2fa0ec;
+  padding: 1rem;
+  border-radius:8px;
 }
 
 //////////////////////////////
@@ -1402,11 +1440,10 @@ background: #B7B6BB !important; /* fallback for old browsers */
 }
 
 .csch_subtle_5 {
-
-
     background: @cstep2;
     box-shadow: 0 0 5px 0 @cstep3;
 }
+
 .csch_subtle_6 {
 
 background: linear-gradient(1deg, rgba(147,128,108,.1), rgba(147,128,108,.3));
@@ -1452,7 +1489,7 @@ background-blend-mode: soft-light,screen;
 }
 
 
-.csch_bright1, .pusher > article:nth-of-type(even) {
+.csch_bright_1, .pusher > article:nth-of-type(even) {
 
 
 background: @cstep2; /* fallback for old browsers */
@@ -1536,6 +1573,12 @@ animation: animbg 16s ease infinite;
     width: 16rem !important;
     max-width: 16rem !important;
     min-width: 16rem !important;
+}
+.un_wide18
+{
+    width: 18rem !important;
+    max-width: 18rem !important;
+    min-width: 18rem !important;
 }
 .un_wide20
 {
@@ -1775,6 +1818,134 @@ animation: animbg 16s ease infinite;
 
 .un_tabs_2  a span {
   font-weight: 700;
+}
+
+
+/*Fun begins*/
+.tab_container, [id="tab-main"], .un_tabs_3 {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: .5rem;
+  position: relative;
+
+      .tab-content {
+      width: 100%;
+    }
+    input, section {
+      clear: both;
+      padding-top: 10px;
+      display: none!important;
+    }
+
+    label, li.nav-item a {
+      font-weight: 700;
+      font-size: 18px;
+      display: block;
+      float: left;
+      width: 20%;
+      padding: 1rem 1.5rem;
+      color: #757575;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      /*background: @npbright2;*/
+      /*background-color: @npbright2;*/
+      border-radius: 0;
+    }
+    li.nav-item a {
+      width: 100%;
+    }
+    > label {
+
+    }
+
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4,
+    #tab5:checked ~ #content5 {
+      display: block!important;
+      padding: .5rem;
+      background: #fff;
+      color: #999;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+
+    label .fa {
+      font-size: 1.3em;
+      margin: 0 0.4em 0 0;
+    }
+
+    .wrapper h2 {
+      text-align: center;
+      margin: .3rem auto;
+    }
+
+
+     .tab-content p,
+     .tab-content h3 {
+      -webkit-animation: fadeInScale 0.7s ease-in-out;
+      -moz-animation: fadeInScale 0.7s ease-in-out;
+      animation: fadeInScale 0.7s ease-in-out;
+    }
+     .tab-content h3  {
+      text-align: center;
+    }
+
+
+
+     [id^="tab"]:checked + label, li.nav-item a.active  {
+      background: rgba(255, 255, 255, 1)!important;
+      box-shadow: inset 0 3px #0CE;
+    }
+
+     [id^="tab"]:checked + label .fa, li.nav-item a.active .fa {
+      color: #0CE;
+    }
+
+
+
+
+    /*Media query*/
+    @media only screen and (max-width: 930px) {
+      label span {
+        font-size: 14px;
+      }
+      label .fa {
+        font-size: 14px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      label span {
+        display: none;
+      }
+
+      label .fa {
+        font-size: 16px;
+      }
+
+    /*  .tab_container {
+        width: 98%;
+      }*/
+    }
+
+    /*Content Animation*/
+    @keyframes fadeInScale {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+
+
 }
 
 
@@ -2176,9 +2347,52 @@ div[class^="communique"] + div[class^="communique"]{
     img {
       max-width: 100%;
     }
+    h4 {
+      padding: 1rem 1rem 1rem 2rem;
+    }
+}
+.un_communique_3 {
+
+    width: 80%;
+    height: 15rem!important;
+    min-height: 10rem;
+    max-height: 10rem;
+    padding: 3rem 1rem;
+    margin: 5rem auto;
+    border-left: 10px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+    font-weight: 600;
+    > i {
+      /*font-size: 250%;*/
+      margin-right: 2rem; 
+    }
+
 }
 
+.un_filelist {
+  li {
+    a {
+    color:yellow;
+      
+    }
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    transition: all 1s ease-in-out;
+    border: 4px solid rgba(80,80,60,0.2);
+  }
+  li:hover {
+    background: yellow;
+    border-radius: 6px;
+    border: 4px solid #aa7;
 
+    a {
+
+      color: #444;
+    }
+  }
+}
 
 .un_btn { 
   border: 0; 
@@ -2188,7 +2402,8 @@ div[class^="communique"] + div[class^="communique"]{
 /*bordered button for dropbox*/
 .un_border_2 { 
   border: 2px solid #999; 
-  /*background: #444;*/
+  /*background:
+   #444;*/
 
 }
 /*bordered button for dropbox*/
@@ -2304,6 +2519,24 @@ pre span
 // FORMS
 //
 ////////////////////////////////
+
+
+.un_form_3 {
+  width: 90%;
+  margin-bottom: 5rem!important;
+  > .un_flex {
+    background: rgba(243,243,240,.14);
+    > div {
+      background:  rgba(243,243,240,.14);
+      margin: 1rem;
+      padding: 1.5rem 2rem;
+    }
+  }
+  textarea {
+    width: 100%;
+  }
+}
+
 
 form:not(.un_box) {
   margin-bottom: 0;
@@ -2799,6 +3032,10 @@ label {
   z-index: 100;
 }
 
+.un_checkbox_4 {
+ max-width: 100%;
+
+}
 .un_checkbox_4.un_flex_vs > * {
  width: 100%;
  /*background: red;*/
@@ -3389,14 +3626,54 @@ label {
     padding-top: 3rem;
     word-break: break-all;
 
-    border: 2px dotted @alert2;
-    background: @alert2;
+    border: 4px dotted @normal;
+    border-radius: 1rem;
+    background: @normal2;
 }
 .un_developer:before
 {
    content: "Developer output box";
+    font: italic 700 1rem 'Open Sans';
    position: absolute; 
    top: .1rem;
+   color: #fff;
+}
+
+
+.un_moderator {
+    position: relative;
+    margin: 3rem 1rem .9rem;
+    padding-top: 3rem;
+    word-break: break-all;
+
+    border: 4px dotted @normal2;
+    border-radius: 8px;
+    background: @normal;
+}
+.un_moderator:before
+{
+   content: "Moderator section";
+   position: absolute; 
+   top: .4rem;
+   left: .4rem;
+   color: #ddd;
+}
+.un_admin {
+    position: relative;
+    margin: 3rem 1rem .9rem;
+    padding-top: 3rem;
+    word-break: break-all;
+
+    border: 4px dotted @normal2;
+    border-radius: 8px;
+    background: @normal;
+}
+.un_admin:before
+{
+   content: "Moderator section";
+   position: absolute; 
+   top: .4rem;
+   left: .4rem;
    color: #ddd;
 }
 

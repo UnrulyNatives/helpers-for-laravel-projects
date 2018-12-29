@@ -1,7 +1,7 @@
 # laravel-helper
 A set of code snippets and functions to use across all projects. 
 
-This package contains some modifications made over a fresh installation of Laravel 5.63. 
+This package contains some modifications made over a fresh installation of Laravel >= 5.3. 
 
 With time, this package would contain all modifications of the bare Laravel app. In other words, as soon as you include this package in your composer.json, you will get fully working starter kit.
 
@@ -96,9 +96,6 @@ use ModelExtensions;`
 
 
 
-
-
-
 ### Done!
  Now you can check if the package works. Point your browser to `unrulyhelpers`. You should see a clock - an example developed along Laraveldaily tutorial http://laraveldaily.com/how-to-create-a-laravel-5-package-in-10-easy-steps/
 
@@ -106,8 +103,6 @@ use ModelExtensions;`
 
 ## To do (Future features)
 
-1. Include Migrations for the Starter Kit package
-2. Include Models for the Starter Kit package
 
 
 ## Example usage
